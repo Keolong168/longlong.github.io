@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>click</title>
+</head>
+<style>
+    body{
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #click{
+        height: 40px;
+        background-color: blue;
+        width: 130px;
+        font-size: 650;
+        font-family: sans-serif;
+        border-radius: 10px;
+        padding: 3px;
+        color: azure;
+        cursor: pointer;
+    }
+    
+</style>
+<body>
+    <button id="click" value="0">Click</button>
+</body>
+<script>
+    
+    document.getElementById('click').addEventListener('click',()=>{
+        value=200000000;
+        var item='';
+        for(var i=0;i<value; i++){
+            item+=`
+            <h1>$Error{value[i]}</h1>
+            `;
+            document.querySelector('body').innerHTML=item;
+        }
+        
+    })
+    
+    
+    
+</script>
+</html>
