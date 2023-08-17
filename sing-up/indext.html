@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-image: url(/img/avg.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+    .container{
+        height: 600px;
+        background-color: rgba(253, 253, 253, 0.68);
+        box-shadow: 0 0 3px;
+        width: 400px;
+        box-shadow: 0px 0px 7px rgb(46, 45, 45);
+        border-radius: 10px;
+        backdrop-filter: blur(10px);
+    }
+    h3{
+        color: blue;
+        font-size: 24px;
+        margin-left: 20px;
+    }
+    .background-input{
+        width: 100%;
+        height: 370px;
+        /* background-color: antiquewhite; */
+        position: relative;
+    }
+    .input{
+        width: 70%;
+        margin-top: 40px;
+        border-bottom: 1px solid gray;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transform: translateX(59px);
+        
+    }
+    input{
+        padding: 0 25px 0 5px;
+        height: 30px;
+        width: 260px;
+        margin-top: 35px;
+        border: 0;
+        outline: none;
+        /* pointer-events: none; */
+        position: relative;
+        background-color: transparent;
+    }
+    label{
+        margin-top: 39px;
+        transform: translateX(-236px);
+        font-family: sans-serif;
+        transition: 0.5s;
+    }
+    .pass{
+        transform: translateX(-207px);
+    }
+    #check{
+        height: 20px;
+        transform: translateX(-65px);
+        position: relative;
+        top: -20px;
+    }
+    .show{
+        position: relative;
+        right: 180px;
+        top: -23px;
+    }
+    a{
+        text-decoration: none;
+        color: blue;
+    }
+    a{
+      position: relative;
+      right: 70px;
+      font-size: 14px;
+      line-height: 0;
+      top: -23px;
+    }
+    .button{
+        transform: translateX(59px);
+        height: 39px;
+        width: 70%;
+        border-radius: 2px;
+        cursor: pointer;
+        background-color: blue;
+        color: white;
+        font-family: sans-serif;
+    }
+    p{
+        transform: translateX(180px);
+        background-color: rgb(253, 253, 253);
+        width: 23px;
+        position: relative;
+        bottom: -22px;
+    }
+    .body{
+        height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+    }
+    .body span a{
+        position: relative;
+        left: 4px;
+        top: 0px;
+        font-size: 15px;
+    }
+    .footer{
+        width: 100%;
+        height: 70px;
+        margin-top: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: sans-serif;
+        font-size: 11px;
+    }
+    .footer span a{
+        position: relative;
+        left: 4px;
+        top: 0px;
+        color: blue;
+    }
+    .footer .space{
+        margin-right: 7px;
+        font-size: 11px;
+    }
+    .footer span{
+        line-height: 2px;
+    }
+    .footer .mid{
+        position: relative;
+        font-size: 11px;
+        left: 120px;
+    }
+</style>
+<body>
+    <div class="container">
+        <h3>Logn In</h3>
+        <div class="background-input">
+            <div class="input">
+                <input type="text" id="em"><label class="email" for="em">Email</label>
+            </div>
+            <div class="input">
+                <input type="password" id="pw"><label class="pass" for="pw">Password</label>
+            </div>
+            <input type="checkbox" id="check"><label class="show" for="check">show</label><a href="#">Forgot pasword?</a>
+        <input class="button" type="button" value="Log In">
+        <p>OR</p>
+        <hr>
+        </div>
+        <div class="body"> 
+            <span>Don't have account?<a href="#">sign up</a></span>
+        </div>
+        <div class="footer">
+            <span>By continuing.you agree to our<a class="space" href="#">term of service</a>and<p class="space"></p><a class="mid" href="#">privacy Policy</a></span>
+        </div>
+    </div>
+</body>
+<script>
+    const input = document.querySelector('input');
+    const pw=document.getElementById('pw');
+    const txt = document.querySelector('.pass');
+    const em=document.getElementById('em');
+    const email=document.querySelector('.email');
+    pw.addEventListener('click',()=>{
+        txt.style.transform="translateY(-36px)";
+    })
+    em.addEventListener('click',()=>{
+        email.style.transform="translateY(-36px)";
+    })
+        //    ======================showpass=====================
+    const check=document.getElementById('check');
+    var a=1;
+    check.addEventListener('click',()=>{
+        
+        if(a==1){
+            pw.type='text';
+            a=0;
+        }else{
+            pw.type='password';
+            a=1;
+        }
+    })
+</script>
+</html>
